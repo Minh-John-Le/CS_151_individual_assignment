@@ -30,16 +30,22 @@ public class Main extends Application {
 			// Input data Pane
 			GridPane inputDataPane = new GridPane();
 			inputDataPane.setPadding(new Insets(10, 10, 10, 10));
+			inputDataPane.setVgap(5);
 			
 			// Data source input text field
-			Label dataSource = new Label(" Data Source Name: ");
+			Label dataSource = new Label(" Data Source _Name: ");
+			dataSource.setMnemonicParsing(true);
+		
 			TextField dataSourceText = new TextField ();
 			dataSourceText.setMinWidth(260);
 			
 			// Data description input text field
-			Label description = new Label(" Description: ");
+			Label description = new Label(" _Description: ");
+			description.setMnemonicParsing(true);
+			
 			TextField descriptionText = new TextField ();
 			descriptionText.setMinWidth(260);
+			
 			
 			inputDataPane.add(dataSource, 0,0);
 			inputDataPane.add(dataSourceText, 1,0);
@@ -56,14 +62,21 @@ public class Main extends Application {
 			Label databaseLbl = new Label("Database: ");
 			
 			// All buttons
-			Button  selectButton = new Button("Select...");
+			Button  selectButton = new Button("_Select...");
 			selectButton.setPrefWidth(buttonSize);
-			Button  createButton = new Button("Create...");
+			selectButton.setMnemonicParsing(true);
+			
+			Button  createButton = new Button("_Create...");
 			createButton.setPrefWidth(buttonSize);
-			Button  repairButton = new Button("Repair...");
+			createButton.setMnemonicParsing(true);
+			
+			Button  repairButton = new Button("_Repair...");
 			repairButton.setPrefWidth(buttonSize);
-			Button  compactButton = new Button("Compact...");
+			repairButton.setMnemonicParsing(true);
+			
+			Button  compactButton = new Button("Co_mpact...");
 			compactButton.setPrefWidth(buttonSize);
+			compactButton.setMnemonicParsing(true);
 			
 			
 			labelPanel.add(databaseLbl, 0, 0);
@@ -91,17 +104,19 @@ public class Main extends Application {
 			Button OKbutton = new Button("OK");
 			OKbutton.setPrefWidth(buttonSize);
 			
-			Button Cancelbutton = new Button("Cancel");
-			Cancelbutton.setPrefWidth(buttonSize);
+			Button cancelbutton = new Button("Cancel");
+			cancelbutton.setPrefWidth(buttonSize);
 			
-			Button Helpbutton = new Button("Help");
-			Helpbutton.setPrefWidth(buttonSize);
+			Button helpButton = new Button("_Help");
+			helpButton.setPrefWidth(buttonSize);
+			helpButton.setMnemonicParsing(true);
 			
-			Button Advancedbutton = new Button("Advanced...");
-			Advancedbutton.setPrefWidth(buttonSize);
+			Button advancedButton = new Button("_Advanced...");
+			advancedButton.setPrefWidth(buttonSize);
+			advancedButton.setMnemonicParsing(true);
 			
 			
-			leftSideButtons.getChildren().addAll(OKbutton,Cancelbutton,Helpbutton,Advancedbutton);
+			leftSideButtons.getChildren().addAll(OKbutton,cancelbutton,helpButton,advancedButton);
 			//===============================================================
 			// System Data Base Panel
 
@@ -110,12 +125,15 @@ public class Main extends Application {
 			systemDataBasePanel.setPadding(new Insets(30, 10, 15, 10));
 			
 			// Two check Box
-			RadioButton noneButton = new RadioButton("None");
-			RadioButton databaseButton = new RadioButton("Database");	
+			RadioButton noneButton = new RadioButton("Non_e");
+			noneButton.setMnemonicParsing(true);
+			RadioButton databaseButton = new RadioButton("Da_tabase");	
+			databaseButton.setMnemonicParsing(true);
 			
 			// System database button
-			Button systemDataButton = new Button("System Database..");
+			Button systemDataButton = new Button("S_ystem Database...");
 			systemDataButton.setStyle("-fx-translate-x: 100\n;");
+			systemDataButton.setMnemonicParsing(true);
 			
 
 			systemDataBasePanel.getChildren().addAll(noneButton, databaseButton, systemDataButton);
@@ -126,8 +144,9 @@ public class Main extends Application {
 			
 			//========================================================================
 			// Bottom right button
-			Button optionButton = new Button("Options>>");
+			Button optionButton = new Button("_Options>>");
 			optionButton.setPrefWidth(buttonSize);
+			optionButton.setMnemonicParsing(true);
 			
 			optionButton.setStyle("-fx-translate-x: 20\n;" + "-fx-translate-y: 35\n;");
 			
@@ -143,6 +162,9 @@ public class Main extends Application {
 			root.add(optionButton, 1, 1);
 			
 			root.setStyle("-fx-background-color:" + mainthemeColor + ";");
+			
+		
+			
 			
 			Scene scene = new Scene(root, 500, 300);
 			

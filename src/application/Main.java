@@ -59,6 +59,9 @@ public class Main extends Application {
 			labelPanel.add(repairButton, 2, 1);
 			labelPanel.add(compactButton, 3, 1);
 			
+			// System Data Base Panel
+			
+			GridPane systemDataBasePanel = new GridPane();
 			// Root
 			root.add(inputDataPane, 0, 0);
 			root.add(labelPanel, 0, 1);

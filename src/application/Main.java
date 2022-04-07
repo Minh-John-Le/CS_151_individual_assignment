@@ -103,6 +103,7 @@ public class Main extends Application {
 			// All buttons
 			Button OKbutton = new Button("OK");
 			OKbutton.setPrefWidth(buttonSize);
+			OKbutton.setDisable(true);
 			
 			Button cancelbutton = new Button("Cancel");
 			cancelbutton.setPrefWidth(buttonSize);
@@ -134,6 +135,7 @@ public class Main extends Application {
 			Button systemDataButton = new Button("S_ystem Database...");
 			systemDataButton.setStyle("-fx-translate-x: 100\n;");
 			systemDataButton.setMnemonicParsing(true);
+			systemDataButton.setDisable(true);
 			
 
 			systemDataBasePanel.getChildren().addAll(noneButton, databaseButton, systemDataButton);
@@ -148,7 +150,7 @@ public class Main extends Application {
 			optionButton.setPrefWidth(buttonSize);
 			optionButton.setMnemonicParsing(true);
 			
-			optionButton.setStyle("-fx-translate-x: 20\n;" + "-fx-translate-y: 35\n;");
+			optionButton.setStyle("-fx-translate-x: 20\n;" + "-fx-translate-y: 50\n;");
 			
 			
 			//========================================================================
